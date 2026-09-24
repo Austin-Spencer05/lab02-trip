@@ -1,4 +1,5 @@
-﻿Console.WriteLine("== Road Trip ==");
+﻿Console.WriteLine("== Information ==");
+Console.WriteLine("== Road Trip ==");
 Console.WriteLine("What was the round trip in miles?");
 int milesForTheTrip = Convert.ToInt32(Console.ReadLine());
 
@@ -12,12 +13,9 @@ double gasPrice = Convert.ToDouble(Console.ReadLine());
 double gallonsNeeded = milesForTheTrip / (double)carMilesPerGallon;
 double fuelCost = gallonsNeeded * gasPrice;
 
-//Do Output
-System.Console.WriteLine("Gallons needed: "+gallonsNeeded.ToString("F2"));
-System.Console.WriteLine("Fuel cost: "+fuelCost.ToString("C2"));
 
 //Next Part
-Console.WriteLine("Food Cost");
+Console.WriteLine("== Food Cost ==");
 Console.WriteLine("How many people are going?");
 int people = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("How many pizzas?");
@@ -31,15 +29,9 @@ double totalslices = pizzas * slices;
 double sliceperpers = totalslices / people;
 
 double pizzaCosttotal= pizzas * pizzaCost;
-//print screen
-System.Console.WriteLine("Total slices: " + totalslices.ToString("F2"));
-
-System.Console.WriteLine("Slices per person: " + sliceperpers.ToString("F2"));
-
-System.Console.WriteLine("Pizza Cost: " +pizzaCosttotal.ToString("C2"));
 
 //Cost control
-Console.WriteLine("Paycheck");
+Console.WriteLine("== Paycheck ==");
 Console.WriteLine("Hours Worked this week?");
 int hours = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Hourly Pay?");
@@ -51,17 +43,32 @@ double grosspay = hours * pay;
 double withheld = grosspay * taxes;
 
 double takehome = grosspay - withheld;
-//Printscreen
-System.Console.WriteLine("Gross pay: " +grosspay.ToString("C2"));
-System.Console.WriteLine("Tax withheld : " +withheld.ToString("C2"));
-System.Console.WriteLine("Take home pay: " +takehome.ToString("C2"));
 // Whole Trip
 double triptot = fuelCost + pizzaCosttotal;
 double costperpers = triptot + people;
 double takehomephr = takehome / hours;
 double hltw = costperpers / takehomephr;
 //Print last section
-Console.WriteLine("Totals");
+Console.WriteLine("== All Outputs ==");
+
+Console.WriteLine("== Fuel ==");
+System.Console.WriteLine("Gallons needed: "+gallonsNeeded.ToString("F2"));
+System.Console.WriteLine("Fuel cost: "+fuelCost.ToString("C2"));
+
+Console.WriteLine("== Food Cost ==");
+
+System.Console.WriteLine("Total slices: " + totalslices.ToString("F2"));
+
+System.Console.WriteLine("Slices per person: " + sliceperpers.ToString("F2"));
+
+System.Console.WriteLine("Pizza Cost: " +pizzaCosttotal.ToString("C2"));
+
+Console.WriteLine("== Paycheck ==");
+System.Console.WriteLine("Gross pay: " +grosspay.ToString("C2"));
+System.Console.WriteLine("Tax withheld : " +withheld.ToString("C2"));
+System.Console.WriteLine("Take home pay: " +takehome.ToString("C2"));
+
+Console.WriteLine("== Trip Cost ==");
 System.Console.WriteLine("Trip total: " + triptot.ToString("C2"));
 
 System.Console.WriteLine("Cost Per Person: " + costperpers.ToString("C2"));
