@@ -55,3 +55,17 @@ double takehome = grosspay - withheld;
 System.Console.WriteLine("Gross pay: " +grosspay.ToString("C2"));
 System.Console.WriteLine("Tax withheld : " +withheld.ToString("C2"));
 System.Console.WriteLine("Take home pay: " +takehome.ToString("C2"));
+// Whole Trip
+double triptot = fuelCost + pizzaCosttotal;
+double costperpers = triptot + people;
+double takehomephr = takehome / hours;
+double hltw = costperpers / takehomephr;
+//Print last section
+Console.WriteLine("Totals");
+System.Console.WriteLine("Trip total: " + triptot.ToString("C2"));
+
+System.Console.WriteLine("Cost Per Person: " + costperpers.ToString("C2"));
+
+System.Console.WriteLine("Take Home Pay Per Hour: " + takehomephr.ToString("C2"));
+
+System.Console.WriteLine("Hours to work to cover your share: " + hltw.ToString("f2"));
