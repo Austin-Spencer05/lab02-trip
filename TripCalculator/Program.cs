@@ -37,3 +37,21 @@ System.Console.WriteLine("Total slices: " + totalslices.ToString("F2"));
 System.Console.WriteLine("Slices per person: " + sliceperpers.ToString("F2"));
 
 System.Console.WriteLine("Pizza Cost: " +pizzaCosttotal.ToString("C2"));
+
+//Cost control
+Console.WriteLine("Paycheck");
+Console.WriteLine("Hours Worked this week?");
+int hours = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Hourly Pay?");
+double pay = Convert.ToDouble(Console.ReadLine());
+const double taxes = 0.18;
+//Math Pt 3
+double grosspay = hours * pay;
+
+double withheld = grosspay * taxes;
+
+double takehome = grosspay - withheld;
+//Printscreen
+System.Console.WriteLine("Gross pay: " +grosspay.ToString("C2"));
+System.Console.WriteLine("Tax withheld : " +withheld.ToString("C2"));
+System.Console.WriteLine("Take home pay: " +takehome.ToString("C2"));
